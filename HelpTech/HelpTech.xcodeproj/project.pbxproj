@@ -29,6 +29,12 @@
 		ADF433BB2BCD7A0B00AB3A98 /* HelpTechApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADF433B92BCD7A0B00AB3A98 /* HelpTechApp.xcdatamodeld */; };
 		ADFF113C2BDFFD8400B88DD4 /* LoginPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF113B2BDFFD8400B88DD4 /* LoginPageViewModel.swift */; };
 		ADFF113F2BDFFE3400B88DD4 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF113E2BDFFE3400B88DD4 /* ViewModelProtocol.swift */; };
+		ADFF11472BE020CC00B88DD4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF11462BE020CC00B88DD4 /* CustomButton.swift */; };
+		ADFF11492BE020D800B88DD4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF11482BE020D800B88DD4 /* CustomTextField.swift */; };
+		ADFF114B2BE0211B00B88DD4 /* CustomTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF114A2BE0211B00B88DD4 /* CustomTextFieldViewModel.swift */; };
+		ADFF114D2BE02EFB00B88DD4 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF114C2BE02EFB00B88DD4 /* PasswordTextField.swift */; };
+		ADFF114F2BE0330900B88DD4 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF114E2BE0330900B88DD4 /* BackButton.swift */; };
+		ADFF11522BE0341800B88DD4 /* VoidHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF11512BE0341800B88DD4 /* VoidHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +123,12 @@
 		ADF433BA2BCD7A0B00AB3A98 /* HelpTechApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HelpTechApp.xcdatamodel; sourceTree = "<group>"; };
 		ADFF113B2BDFFD8400B88DD4 /* LoginPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewModel.swift; sourceTree = "<group>"; };
 		ADFF113E2BDFFE3400B88DD4 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		ADFF11462BE020CC00B88DD4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		ADFF11482BE020D800B88DD4 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		ADFF114A2BE0211B00B88DD4 /* CustomTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldViewModel.swift; sourceTree = "<group>"; };
+		ADFF114C2BE02EFB00B88DD4 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		ADFF114E2BE0330900B88DD4 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		ADFF11512BE0341800B88DD4 /* VoidHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +245,8 @@
 		ADF4336E2BCD78CC00AB3A98 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF11452BE020BD00B88DD4 /* Button */,
+				ADFF11442BE020AD00B88DD4 /* TextField */,
 				ADF4336F2BCD78CC00AB3A98 /* UI.h */,
 			);
 			path = UI;
@@ -241,6 +255,7 @@
 		ADF4337F2BCD78E100AB3A98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				ADFF11502BE033FA00B88DD4 /* TypeAlias */,
 				ADF433BD2BCD7A2800AB3A98 /* DTOs */,
 				ADF433BC2BCD7A2300AB3A98 /* Enums */,
 				ADF433802BCD78E100AB3A98 /* Common.h */,
@@ -459,6 +474,33 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		ADFF11442BE020AD00B88DD4 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF11482BE020D800B88DD4 /* CustomTextField.swift */,
+				ADFF114C2BE02EFB00B88DD4 /* PasswordTextField.swift */,
+				ADFF114A2BE0211B00B88DD4 /* CustomTextFieldViewModel.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		ADFF11452BE020BD00B88DD4 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF11462BE020CC00B88DD4 /* CustomButton.swift */,
+				ADFF114E2BE0330900B88DD4 /* BackButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		ADFF11502BE033FA00B88DD4 /* TypeAlias */ = {
+			isa = PBXGroup;
+			children = (
+				ADFF11512BE0341800B88DD4 /* VoidHandler.swift */,
+			);
+			path = TypeAlias;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -609,9 +651,11 @@
 					};
 					ADF4336C2BCD78CC00AB3A98 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 					ADF4337D2BCD78E100AB3A98 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 					ADF4338D2BCD78ED00AB3A98 = {
 						CreatedOnToolsVersion = 15.3;
@@ -699,6 +743,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADFF114B2BE0211B00B88DD4 /* CustomTextFieldViewModel.swift in Sources */,
+				ADFF11492BE020D800B88DD4 /* CustomTextField.swift in Sources */,
+				ADFF114D2BE02EFB00B88DD4 /* PasswordTextField.swift in Sources */,
+				ADFF11472BE020CC00B88DD4 /* CustomButton.swift in Sources */,
+				ADFF114F2BE0330900B88DD4 /* BackButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +755,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADFF11522BE0341800B88DD4 /* VoidHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,6 +937,7 @@
 		AD3918CA2BCD67A400E57AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -920,6 +971,7 @@
 		AD3918CB2BCD67A400E57AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -954,6 +1006,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -982,6 +1035,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -993,6 +1047,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1032,6 +1087,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1060,6 +1116,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1071,6 +1128,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
