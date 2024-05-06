@@ -28,6 +28,7 @@ public struct CustomButtonView: View {
         } label: {
             HStack(spacing: 10, content: {
                 Text(text)
+                    .bold()
                     .foregroundColor(.white)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 8)
