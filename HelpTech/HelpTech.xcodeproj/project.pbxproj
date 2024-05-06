@@ -11,6 +11,10 @@
 		AD3918BC2BCD67A200E57AF7 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3918BB2BCD67A200E57AF7 /* LoginPageView.swift */; };
 		AD3918BE2BCD67A400E57AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3918BD2BCD67A400E57AF7 /* Assets.xcassets */; };
 		AD3918C12BCD67A400E57AF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3918C02BCD67A400E57AF7 /* Preview Assets.xcassets */; };
+		ADF41DE62BE9152F00D3D791 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DE52BE9152F00D3D791 /* HomePageView.swift */; };
+		ADF41DE82BE9153800D3D791 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DE72BE9153800D3D791 /* HomePageViewModel.swift */; };
+		ADF41DEA2BE91CEF00D3D791 /* RecoverPasswordPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DE92BE91CEF00D3D791 /* RecoverPasswordPageView.swift */; };
+		ADF41DEC2BE91CF700D3D791 /* RecoverPasswordPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DEB2BE91CF700D3D791 /* RecoverPasswordPageViewModel.swift */; };
 		ADF433702BCD78CC00AB3A98 /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF4336F2BCD78CC00AB3A98 /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF433732BCD78CC00AB3A98 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF4336D2BCD78CC00AB3A98 /* UI.framework */; };
 		ADF433742BCD78CC00AB3A98 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ADF4336D2BCD78CC00AB3A98 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -112,6 +116,10 @@
 		AD3918BB2BCD67A200E57AF7 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		AD3918BD2BCD67A400E57AF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD3918C02BCD67A400E57AF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ADF41DE52BE9152F00D3D791 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		ADF41DE72BE9153800D3D791 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		ADF41DE92BE91CEF00D3D791 /* RecoverPasswordPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordPageView.swift; sourceTree = "<group>"; };
+		ADF41DEB2BE91CF700D3D791 /* RecoverPasswordPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordPageViewModel.swift; sourceTree = "<group>"; };
 		ADF4336D2BCD78CC00AB3A98 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF4336F2BCD78CC00AB3A98 /* UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = "<group>"; };
 		ADF4337E2BCD78E100AB3A98 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,6 +361,8 @@
 		ADF433C42BCD7AC400AB3A98 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				ADF41DE52BE9152F00D3D791 /* HomePageView.swift */,
+				ADF41DE72BE9153800D3D791 /* HomePageViewModel.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -360,6 +370,8 @@
 		ADF433C52BCD7ACA00AB3A98 /* RecoverPasswordPage */ = {
 			isa = PBXGroup;
 			children = (
+				ADF41DE92BE91CEF00D3D791 /* RecoverPasswordPageView.swift */,
+				ADF41DEB2BE91CF700D3D791 /* RecoverPasswordPageViewModel.swift */,
 			);
 			path = RecoverPasswordPage;
 			sourceTree = "<group>";
@@ -734,8 +746,12 @@
 			files = (
 				ADFF113F2BDFFE3400B88DD4 /* ViewModelProtocol.swift in Sources */,
 				ADFF113C2BDFFD8400B88DD4 /* LoginPageViewModel.swift in Sources */,
+				ADF41DE82BE9153800D3D791 /* HomePageViewModel.swift in Sources */,
+				ADF41DEC2BE91CF700D3D791 /* RecoverPasswordPageViewModel.swift in Sources */,
 				AD3918BC2BCD67A200E57AF7 /* LoginPageView.swift in Sources */,
 				AD3918BA2BCD67A200E57AF7 /* HelpTechApp.swift in Sources */,
+				ADF41DEA2BE91CEF00D3D791 /* RecoverPasswordPageView.swift in Sources */,
+				ADF41DE62BE9152F00D3D791 /* HomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
