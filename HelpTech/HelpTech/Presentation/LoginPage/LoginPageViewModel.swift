@@ -21,11 +21,11 @@ class LoginPageViewModel: LoginPageViewModelProtocol {
     
     @Published
     var emailTextField: CustomTextFieldViewModel = .init(title: "E-mail",
-                                                         placeholder: "e-mail",
+                                                         placeholder: "e-mail...",
                                                          text: "")
     @Published
     var passwordTextField: CustomTextFieldViewModel = .init(title: "Password",
-                                                            placeholder: "password",
+                                                            placeholder: "password...",
                                                             text: "")
     @Published
     var isEnabled = true

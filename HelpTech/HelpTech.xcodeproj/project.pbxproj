@@ -11,10 +11,16 @@
 		AD3918BC2BCD67A200E57AF7 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3918BB2BCD67A200E57AF7 /* LoginPageView.swift */; };
 		AD3918BE2BCD67A400E57AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3918BD2BCD67A400E57AF7 /* Assets.xcassets */; };
 		AD3918C12BCD67A400E57AF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3918C02BCD67A400E57AF7 /* Preview Assets.xcassets */; };
+		AD891DD02BF17DA5007F92EF /* CustomDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DCF2BF17DA5007F92EF /* CustomDropdown.swift */; };
+		AD891DD42BF17E03007F92EF /* CustomDropdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DD32BF17E03007F92EF /* CustomDropdownViewModel.swift */; };
+		AD891DD62BF18E2C007F92EF /* AlertNoStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DD52BF18E2C007F92EF /* AlertNoStock.swift */; };
+		AD891DD82BF18E39007F92EF /* AlertAskStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DD72BF18E39007F92EF /* AlertAskStock.swift */; };
 		ADF41DE62BE9152F00D3D791 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DE52BE9152F00D3D791 /* HomePageView.swift */; };
 		ADF41DE82BE9153800D3D791 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DE72BE9153800D3D791 /* HomePageViewModel.swift */; };
 		ADF41DEA2BE91CEF00D3D791 /* RecoverPasswordPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DE92BE91CEF00D3D791 /* RecoverPasswordPageView.swift */; };
 		ADF41DEC2BE91CF700D3D791 /* RecoverPasswordPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DEB2BE91CF700D3D791 /* RecoverPasswordPageViewModel.swift */; };
+		ADF41DEE2BE932A100D3D791 /* SignUpPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DED2BE932A100D3D791 /* SignUpPageView.swift */; };
+		ADF41DF02BE932AA00D3D791 /* SignUpPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DEF2BE932AA00D3D791 /* SignUpPageViewModel.swift */; };
 		ADF433702BCD78CC00AB3A98 /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF4336F2BCD78CC00AB3A98 /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF433732BCD78CC00AB3A98 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF4336D2BCD78CC00AB3A98 /* UI.framework */; };
 		ADF433742BCD78CC00AB3A98 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ADF4336D2BCD78CC00AB3A98 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -116,10 +122,16 @@
 		AD3918BB2BCD67A200E57AF7 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		AD3918BD2BCD67A400E57AF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD3918C02BCD67A400E57AF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AD891DCF2BF17DA5007F92EF /* CustomDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdown.swift; sourceTree = "<group>"; };
+		AD891DD32BF17E03007F92EF /* CustomDropdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdownViewModel.swift; sourceTree = "<group>"; };
+		AD891DD52BF18E2C007F92EF /* AlertNoStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNoStock.swift; sourceTree = "<group>"; };
+		AD891DD72BF18E39007F92EF /* AlertAskStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAskStock.swift; sourceTree = "<group>"; };
 		ADF41DE52BE9152F00D3D791 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		ADF41DE72BE9153800D3D791 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		ADF41DE92BE91CEF00D3D791 /* RecoverPasswordPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordPageView.swift; sourceTree = "<group>"; };
 		ADF41DEB2BE91CF700D3D791 /* RecoverPasswordPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordPageViewModel.swift; sourceTree = "<group>"; };
+		ADF41DED2BE932A100D3D791 /* SignUpPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageView.swift; sourceTree = "<group>"; };
+		ADF41DEF2BE932AA00D3D791 /* SignUpPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageViewModel.swift; sourceTree = "<group>"; };
 		ADF4336D2BCD78CC00AB3A98 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF4336F2BCD78CC00AB3A98 /* UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = "<group>"; };
 		ADF4337E2BCD78E100AB3A98 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +242,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AD891DCE2BF17D86007F92EF /* Dropdown */ = {
+			isa = PBXGroup;
+			children = (
+				AD891DCF2BF17DA5007F92EF /* CustomDropdown.swift */,
+				AD891DD32BF17E03007F92EF /* CustomDropdownViewModel.swift */,
+			);
+			path = Dropdown;
+			sourceTree = "<group>";
+		};
 		ADF433672BCD78AD00AB3A98 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +274,9 @@
 		ADF4336E2BCD78CC00AB3A98 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				ADF433D12BCD7BF800AB3A98 /* AlertNoStock */,
+				ADF433D22BCD7C1400AB3A98 /* AlertAskStock */,
+				AD891DCE2BF17D86007F92EF /* Dropdown */,
 				ADFF11452BE020BD00B88DD4 /* Button */,
 				ADFF11442BE020AD00B88DD4 /* TextField */,
 				ADF4336F2BCD78CC00AB3A98 /* UI.h */,
@@ -379,6 +403,8 @@
 		ADF433C62BCD7AE700AB3A98 /* SignUpPage */ = {
 			isa = PBXGroup;
 			children = (
+				ADF41DED2BE932A100D3D791 /* SignUpPageView.swift */,
+				ADF41DEF2BE932AA00D3D791 /* SignUpPageViewModel.swift */,
 			);
 			path = SignUpPage;
 			sourceTree = "<group>";
@@ -450,9 +476,6 @@
 			isa = PBXGroup;
 			children = (
 				ADFF113D2BDFFE2300B88DD4 /* ViewModel */,
-				ADF433D32BCD7DAC00AB3A98 /* Coordinator */,
-				ADF433D22BCD7C1400AB3A98 /* AlertAskStock */,
-				ADF433D12BCD7BF800AB3A98 /* AlertNoStock */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -460,6 +483,7 @@
 		ADF433D12BCD7BF800AB3A98 /* AlertNoStock */ = {
 			isa = PBXGroup;
 			children = (
+				AD891DD52BF18E2C007F92EF /* AlertNoStock.swift */,
 			);
 			path = AlertNoStock;
 			sourceTree = "<group>";
@@ -467,15 +491,9 @@
 		ADF433D22BCD7C1400AB3A98 /* AlertAskStock */ = {
 			isa = PBXGroup;
 			children = (
+				AD891DD72BF18E39007F92EF /* AlertAskStock.swift */,
 			);
 			path = AlertAskStock;
-			sourceTree = "<group>";
-		};
-		ADF433D32BCD7DAC00AB3A98 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		ADFF113D2BDFFE2300B88DD4 /* ViewModel */ = {
@@ -744,6 +762,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF41DEE2BE932A100D3D791 /* SignUpPageView.swift in Sources */,
+				ADF41DF02BE932AA00D3D791 /* SignUpPageViewModel.swift in Sources */,
 				ADFF113F2BDFFE3400B88DD4 /* ViewModelProtocol.swift in Sources */,
 				ADFF113C2BDFFD8400B88DD4 /* LoginPageViewModel.swift in Sources */,
 				ADF41DE82BE9153800D3D791 /* HomePageViewModel.swift in Sources */,
@@ -760,9 +780,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADFF114B2BE0211B00B88DD4 /* CustomTextFieldViewModel.swift in Sources */,
+				AD891DD42BF17E03007F92EF /* CustomDropdownViewModel.swift in Sources */,
+				AD891DD02BF17DA5007F92EF /* CustomDropdown.swift in Sources */,
 				ADFF11492BE020D800B88DD4 /* CustomTextField.swift in Sources */,
 				ADFF114D2BE02EFB00B88DD4 /* PasswordTextField.swift in Sources */,
 				ADFF11472BE020CC00B88DD4 /* CustomButton.swift in Sources */,
+				AD891DD62BF18E2C007F92EF /* AlertNoStock.swift in Sources */,
+				AD891DD82BF18E39007F92EF /* AlertAskStock.swift in Sources */,
 				ADFF114F2BE0330900B88DD4 /* BackButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

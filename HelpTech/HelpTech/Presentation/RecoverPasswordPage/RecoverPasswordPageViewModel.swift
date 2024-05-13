@@ -20,7 +20,7 @@ class RecoverPasswordPageViewModel: RecoverPasswordPageViewModelProtocol {
     
     @Published
     var emailTextField: CustomTextFieldViewModel = .init(title: "E-mail",
-                                                         placeholder: "e-mail",
+                                                         placeholder: "e-mail...",
                                                          text: "")
     
     @Published
