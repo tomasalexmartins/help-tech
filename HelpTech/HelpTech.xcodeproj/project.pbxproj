@@ -19,6 +19,9 @@
 		AD891DDD2BF28632007F92EF /* ClientViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DDC2BF28632007F92EF /* ClientViewViewModel.swift */; };
 		AD891DDF2BF28766007F92EF /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DDE2BF28766007F92EF /* DeleteButton.swift */; };
 		AD891DE12BF28791007F92EF /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DE02BF28791007F92EF /* EditButton.swift */; };
+		AD891DE52BF29DF7007F92EF /* ClientPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DE42BF29DF7007F92EF /* ClientPageView.swift */; };
+		AD891DE72BF29E4E007F92EF /* ClientPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DE62BF29E4E007F92EF /* ClientPageViewModel.swift */; };
+		AD891DE92BF2AA58007F92EF /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DE82BF2AA58007F92EF /* Client.swift */; };
 		ADF41DE62BE9152F00D3D791 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DE52BE9152F00D3D791 /* HomePageView.swift */; };
 		ADF41DE82BE9153800D3D791 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DE72BE9153800D3D791 /* HomePageViewModel.swift */; };
 		ADF41DEA2BE91CEF00D3D791 /* RecoverPasswordPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DE92BE91CEF00D3D791 /* RecoverPasswordPageView.swift */; };
@@ -134,6 +137,9 @@
 		AD891DDC2BF28632007F92EF /* ClientViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewViewModel.swift; sourceTree = "<group>"; };
 		AD891DDE2BF28766007F92EF /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		AD891DE02BF28791007F92EF /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
+		AD891DE42BF29DF7007F92EF /* ClientPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPageView.swift; sourceTree = "<group>"; };
+		AD891DE62BF29E4E007F92EF /* ClientPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPageViewModel.swift; sourceTree = "<group>"; };
+		AD891DE82BF2AA58007F92EF /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		ADF41DE52BE9152F00D3D791 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		ADF41DE72BE9153800D3D791 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		ADF41DE92BE91CEF00D3D791 /* RecoverPasswordPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordPageView.swift; sourceTree = "<group>"; };
@@ -366,6 +372,7 @@
 		ADF433BF2BCD7A6C00AB3A98 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AD891DE82BF2AA58007F92EF /* Client.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -430,6 +437,8 @@
 		ADF433C72BCD7AFE00AB3A98 /* ClientsPage */ = {
 			isa = PBXGroup;
 			children = (
+				AD891DE42BF29DF7007F92EF /* ClientPageView.swift */,
+				AD891DE62BF29E4E007F92EF /* ClientPageViewModel.swift */,
 			);
 			path = ClientsPage;
 			sourceTree = "<group>";
@@ -709,6 +718,7 @@
 					};
 					ADF4338D2BCD78ED00AB3A98 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 					ADF4339D2BCD78F800AB3A98 = {
 						CreatedOnToolsVersion = 15.3;
@@ -789,6 +799,8 @@
 				ADF41DE82BE9153800D3D791 /* HomePageViewModel.swift in Sources */,
 				ADF41DEC2BE91CF700D3D791 /* RecoverPasswordPageViewModel.swift in Sources */,
 				AD3918BC2BCD67A200E57AF7 /* LoginPageView.swift in Sources */,
+				AD891DE52BF29DF7007F92EF /* ClientPageView.swift in Sources */,
+				AD891DE72BF29E4E007F92EF /* ClientPageViewModel.swift in Sources */,
 				AD3918BA2BCD67A200E57AF7 /* HelpTechApp.swift in Sources */,
 				ADF41DEA2BE91CEF00D3D791 /* RecoverPasswordPageView.swift in Sources */,
 				ADF41DE62BE9152F00D3D791 /* HomePageView.swift in Sources */,
@@ -827,6 +839,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD891DE92BF2AA58007F92EF /* Client.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1232,6 +1245,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1260,6 +1274,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1271,6 +1286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
