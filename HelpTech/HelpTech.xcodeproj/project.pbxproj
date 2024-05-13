@@ -15,6 +15,10 @@
 		AD891DD42BF17E03007F92EF /* CustomDropdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DD32BF17E03007F92EF /* CustomDropdownViewModel.swift */; };
 		AD891DD62BF18E2C007F92EF /* AlertNoStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DD52BF18E2C007F92EF /* AlertNoStock.swift */; };
 		AD891DD82BF18E39007F92EF /* AlertAskStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DD72BF18E39007F92EF /* AlertAskStock.swift */; };
+		AD891DDB2BF285A6007F92EF /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DDA2BF285A6007F92EF /* ClientView.swift */; };
+		AD891DDD2BF28632007F92EF /* ClientViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DDC2BF28632007F92EF /* ClientViewViewModel.swift */; };
+		AD891DDF2BF28766007F92EF /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DDE2BF28766007F92EF /* DeleteButton.swift */; };
+		AD891DE12BF28791007F92EF /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD891DE02BF28791007F92EF /* EditButton.swift */; };
 		ADF41DE62BE9152F00D3D791 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DE52BE9152F00D3D791 /* HomePageView.swift */; };
 		ADF41DE82BE9153800D3D791 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DE72BE9153800D3D791 /* HomePageViewModel.swift */; };
 		ADF41DEA2BE91CEF00D3D791 /* RecoverPasswordPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF41DE92BE91CEF00D3D791 /* RecoverPasswordPageView.swift */; };
@@ -126,6 +130,10 @@
 		AD891DD32BF17E03007F92EF /* CustomDropdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdownViewModel.swift; sourceTree = "<group>"; };
 		AD891DD52BF18E2C007F92EF /* AlertNoStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNoStock.swift; sourceTree = "<group>"; };
 		AD891DD72BF18E39007F92EF /* AlertAskStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAskStock.swift; sourceTree = "<group>"; };
+		AD891DDA2BF285A6007F92EF /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
+		AD891DDC2BF28632007F92EF /* ClientViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewViewModel.swift; sourceTree = "<group>"; };
+		AD891DDE2BF28766007F92EF /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		AD891DE02BF28791007F92EF /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
 		ADF41DE52BE9152F00D3D791 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		ADF41DE72BE9153800D3D791 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		ADF41DE92BE91CEF00D3D791 /* RecoverPasswordPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordPageView.swift; sourceTree = "<group>"; };
@@ -251,6 +259,15 @@
 			path = Dropdown;
 			sourceTree = "<group>";
 		};
+		AD891DD92BF28596007F92EF /* ClientView */ = {
+			isa = PBXGroup;
+			children = (
+				AD891DDA2BF285A6007F92EF /* ClientView.swift */,
+				AD891DDC2BF28632007F92EF /* ClientViewViewModel.swift */,
+			);
+			path = ClientView;
+			sourceTree = "<group>";
+		};
 		ADF433672BCD78AD00AB3A98 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +291,7 @@
 		ADF4336E2BCD78CC00AB3A98 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AD891DD92BF28596007F92EF /* ClientView */,
 				ADF433D12BCD7BF800AB3A98 /* AlertNoStock */,
 				ADF433D22BCD7C1400AB3A98 /* AlertAskStock */,
 				AD891DCE2BF17D86007F92EF /* Dropdown */,
@@ -519,6 +537,8 @@
 			children = (
 				ADFF11462BE020CC00B88DD4 /* CustomButton.swift */,
 				ADFF114E2BE0330900B88DD4 /* BackButton.swift */,
+				AD891DDE2BF28766007F92EF /* DeleteButton.swift */,
+				AD891DE02BF28791007F92EF /* EditButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -780,11 +800,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADFF114B2BE0211B00B88DD4 /* CustomTextFieldViewModel.swift in Sources */,
+				AD891DDB2BF285A6007F92EF /* ClientView.swift in Sources */,
 				AD891DD42BF17E03007F92EF /* CustomDropdownViewModel.swift in Sources */,
 				AD891DD02BF17DA5007F92EF /* CustomDropdown.swift in Sources */,
 				ADFF11492BE020D800B88DD4 /* CustomTextField.swift in Sources */,
+				AD891DE12BF28791007F92EF /* EditButton.swift in Sources */,
 				ADFF114D2BE02EFB00B88DD4 /* PasswordTextField.swift in Sources */,
 				ADFF11472BE020CC00B88DD4 /* CustomButton.swift in Sources */,
+				AD891DDD2BF28632007F92EF /* ClientViewViewModel.swift in Sources */,
+				AD891DDF2BF28766007F92EF /* DeleteButton.swift in Sources */,
 				AD891DD62BF18E2C007F92EF /* AlertNoStock.swift in Sources */,
 				AD891DD82BF18E39007F92EF /* AlertAskStock.swift in Sources */,
 				ADFF114F2BE0330900B88DD4 /* BackButton.swift in Sources */,
