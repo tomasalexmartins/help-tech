@@ -17,7 +17,6 @@ public protocol CustomDropdownViewModelProtocol: ObservableObject {
 
 public class CustomDropdownViewModel: CustomDropdownViewModelProtocol {
 
-    // MARK: - UI Properties
     @Binding
     public var selected: String
     @Binding

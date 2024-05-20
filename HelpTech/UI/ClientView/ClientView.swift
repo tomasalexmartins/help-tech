@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct ClientView<ViewModel: ClientViewViewModelProtocol>: View {
+public struct ClientView<ViewModel: ClientViewModelProtocol>: View {
     @ObservedObject
     public var viewModel: ViewModel
     
@@ -36,12 +36,12 @@ public struct ClientView<ViewModel: ClientViewViewModelProtocol>: View {
         .padding(.trailing, 15)
     }
     
-    var cancelButton: some View {
+    var eraseButton: some View {
         DeleteButtonView(action: .constant({viewModel.delete()}))
             .frame(width: 35, height: 35)
     }
     
-    var sendButton: some View {
+    var editButton: some View {
         EditButtonView(action: .constant({viewModel.edit()}))
             .frame(width: 35, height: 35)
     }
@@ -52,8 +52,8 @@ public struct ClientView<ViewModel: ClientViewViewModelProtocol>: View {
                 infoView
                 Spacer()
                 VStack(alignment: .trailing) {
-                    cancelButton
-                    sendButton
+                    eraseButton
+                    editButton
                 }
                 .padding(.trailing, 10)
             }
@@ -66,7 +66,7 @@ public struct ClientView<ViewModel: ClientViewViewModelProtocol>: View {
     @State var email: String = "joaorodrigues@gmail.com"
     @State var cellphone: String = "967432153"
     
-    return ClientView(viewModel: ClientViewViewModel(name: $name, email: $email , cellphone: $cellphone))
+    return ClientView(viewModel: ClientViewModel(name: $name, email: $email , cellphone: $cellphone))
         .padding()
         .background(.white)
 }

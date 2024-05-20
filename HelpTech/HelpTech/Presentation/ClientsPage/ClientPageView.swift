@@ -47,7 +47,7 @@ struct ClientPageView<ViewModel:ClientPageViewModelProtocol>: ClientPageViewProt
         VStack(alignment: .leading) {
             ForEach(viewModel.clients.indices, id: \.self) { index in
                 VStack(alignment: .leading, spacing: 0) {
-                    ClientView(viewModel: ClientViewViewModel(name: .constant("\(viewModel.clients[index].firstname ?? "") \(viewModel.clients[index].lastname ?? "")"), email: .constant(viewModel.clients[index].email ?? ""), cellphone: .constant(viewModel.clients[index].cellphone ?? "")))
+                    ClientView(viewModel: ClientViewModel(name: .constant("\(viewModel.clients[index].firstname ?? "") \(viewModel.clients[index].lastname ?? "")"), email: .constant(viewModel.clients[index].email ?? ""), cellphone: .constant(viewModel.clients[index].cellphone ?? "")))
                         .padding(.vertical, 20)
                         .padding(.horizontal, 10)
                 }
@@ -71,11 +71,11 @@ struct ClientPageView<ViewModel:ClientPageViewModelProtocol>: ClientPageViewProt
         VStack() {
             backButton
             titleView
-            listView
-            VStack() {
-                newClientButton
-                Spacer()
+            ScrollView {
+                listView
             }
+            newClientButton
+            Spacer()
             .navigationBarBackButtonHidden(true)
         }
         .background(.gray.opacity(0.3))
