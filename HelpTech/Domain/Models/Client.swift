@@ -11,27 +11,24 @@ import Common
 public struct Client: Hashable, Decodable {
 
     public let id: String?
-    public var firstname: String?
-    public var lastname: String?
+    public var name: String?
     public var email: String?
     public var cellphone: String?
-    public var adress: String?
+    public var address: String?
     public var nif: Int?
 
     public init(id: String? = nil,
-                firstname: String? = nil,
-                lastname: String? = nil,
+                name: String? = nil,
                 email: String? = nil,
                 cellphone: String? = nil,
-                adress: String? = nil,
+                address: String? = nil,
                 nif: Int? = nil) {
 
         self.id = id
-        self.firstname = firstname
-        self.lastname = lastname
+        self.name = name
         self.email = email
         self.cellphone = cellphone
-        self.adress = adress
+        self.address = address
         self.nif = nif
     }
 
