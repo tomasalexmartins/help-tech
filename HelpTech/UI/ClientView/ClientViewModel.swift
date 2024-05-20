@@ -1,15 +1,15 @@
 //
-//  ClientViewViewModel.swift
+//  ClientViewModel.swift
 //  UI
 //
-//  Created by Martins, Tomas Alexandre on 13/05/2024.
+//  Created by Martins, Tomas Alexandre on 20/05/2024.
 //
 
 import Foundation
 import SwiftUI
 import Common
 
-public protocol ClientViewViewModelProtocol: ObservableObject {
+public protocol ClientViewModelProtocol: ObservableObject {
     var name: String { get set }
     var email: String { get set }
     var cellphone: String { get set }
@@ -18,9 +18,8 @@ public protocol ClientViewViewModelProtocol: ObservableObject {
     func edit()
 }
 
-public class ClientViewViewModel: ClientViewViewModelProtocol {
-    
-    // MARK: - UI Properties
+public class ClientViewModel: ClientViewModelProtocol {
+
     @Binding
     public var name: String
     @Binding
