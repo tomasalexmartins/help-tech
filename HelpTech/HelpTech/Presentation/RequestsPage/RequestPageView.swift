@@ -12,12 +12,13 @@ protocol RequestPageViewProtocol: View { }
 
 struct RequestPageView<ViewModel:RequestPageViewModelProtocol>: RequestPageViewProtocol {
     
+    @Environment(\.presentationMode) var presentationMode
     @StateObject
     var viewModel: ViewModel
     
     var backButton: some View {
         VStack(alignment: .leading) {
-            BackButtonView(action: .constant({viewModel.back()}))
+            BackButtonView(action: .constant({presentationMode.wrappedValue.dismiss()}))
         }
         .frame(height: 65)
         .padding(.trailing, 330)
@@ -67,17 +68,20 @@ struct RequestPageView<ViewModel:RequestPageViewModelProtocol>: RequestPageViewP
     }
     
     var body: some View {
-        VStack() {
-            backButton
-            titleView
-            ScrollView {
-                listView
+        NavigationView {
+            VStack() {
+                backButton
+                titleView
+                ScrollView {
+                    listView
+                }
+                newRequestButton
+                Spacer()
+                   
             }
-            newRequestButton
-            Spacer()
-                .navigationBarBackButtonHidden(true)
+            .background(.gray.opacity(0.3))
         }
-        .background(.gray.opacity(0.3))
+        .navigationBarBackButtonHidden(true)
     }
 }
 

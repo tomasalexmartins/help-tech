@@ -30,7 +30,7 @@ public extension Client {
         id: "3",
         name: "Carlos Pereira",
         email: "carlos.pereira@example.com",
-        cellphone: "933333333",
+        cellphone: "933676897",
         address: "Praça Central 789",
         nif: 112233445
     )
@@ -39,7 +39,7 @@ public extension Client {
         id: "4",
         name: "Maria Oliveira",
         email: "maria.oliveira@example.com",
-        cellphone: "944444444",
+        cellphone: "925678234",
         address: "Travessa da Liberdade 101",
         nif: 223344556
     )
@@ -48,7 +48,7 @@ public extension Client {
         id: "5",
         name: "Pedro Fernandes",
         email: "pedro.fernandes@example.com",
-        cellphone: "955555555",
+        cellphone: "915643897",
         address: "Rua Nova 202",
         nif: 334455667
     )

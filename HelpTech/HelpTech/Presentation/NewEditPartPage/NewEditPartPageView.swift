@@ -1,16 +1,16 @@
 //
-//  NewEditClientPageView.swift
+//  NewEditPartPageView.swift
 //  HelpTech
 //
-//  Created by Martins, Tomas Alexandre on 19/05/2024.
+//  Created by Martins, Tomas Alexandre on 26/05/2024.
 //
 
 import SwiftUI
 import UI
 
-protocol NewEditClientPageViewProtocol: View { }
+protocol NewEditPartPageViewProtocol: View { }
 
-struct NewEditClientPageView<ViewModel:NewEditClientPageViewModelProtocol>: NewEditClientPageViewProtocol {
+struct NewEditPartPageView<ViewModel:NewEditPartPageViewModelProtocol>: NewEditPartPageViewProtocol {
     
     @Environment(\.presentationMode) var presentationMode
     @StateObject
@@ -27,7 +27,7 @@ struct NewEditClientPageView<ViewModel:NewEditClientPageViewModelProtocol>: NewE
     
     var titleView: some View {
         VStack {
-            Text(viewModel.title)
+            Text(viewModel.isEditMode ? "Editar Peça" : "Adicionar Peça")
                 .font(.title3)
                 .bold()
         }
@@ -40,35 +40,32 @@ struct NewEditClientPageView<ViewModel:NewEditClientPageViewModelProtocol>: NewE
             .padding(.top, 15)
     }
     
-    var emailView: some View {
-        CustomTextField(viewModel: viewModel.emailTextField)
+    var supplierView: some View {
+        SupplierDropdown(viewModel: SupplierDropdownViewModel(selected: $viewModel.selected))
             .padding(.horizontal, 40)
             .padding(.top, 15)
     }
     
-    var cellphoneView: some View {
-        CustomTextField(viewModel: viewModel.cellphoneTextField)
+    var quantityView: some View {
+        CustomTextField(viewModel: viewModel.quantityTextField)
             .padding(.horizontal, 40)
             .padding(.top, 15)
     }
     
-    var addressView: some View {
-        CustomTextField(viewModel: viewModel.addressTextField)
-            .padding(.horizontal, 40)
-            .padding(.top, 15)
-    }
-    
-    var nifView: some View {
-        CustomTextField(viewModel: viewModel.nifTextField)
-            .padding(.horizontal, 40)
-            .padding(.top, 15)
-    }
-    
-    
-    var newEditClientButton: some View {
+    var newEditPartButton: some View {
         VStack {
-            CustomButtonView(text: .constant(viewModel.btnText), isEnabled:
-                    .constant(true), action: .constant({viewModel.newEditClient()}))
+            CustomButtonView(text: .constant(viewModel.isEditMode ? "Editar Peça" : "Adicionar Peça"), isEnabled:
+                    .constant(true), action: .constant({viewModel.newEditPart()}))
+        }
+        .padding(.horizontal, 40)
+        .padding(.top, 15)
+        .frame(height: 65)
+    }
+    
+    var emitPartButton: some View {
+        VStack {
+            CustomButtonView(text: .constant("Emitir Pedido ao Fornecedor"), isEnabled:
+                    .constant(true), action: .constant({}))
         }
         .padding(.horizontal, 40)
         .padding(.top, 15)
@@ -80,12 +77,13 @@ struct NewEditClientPageView<ViewModel:NewEditClientPageViewModelProtocol>: NewE
             backButton
             titleView
             nameView
-            emailView
-            cellphoneView
-            addressView
-            nifView
+            supplierView
+            quantityView
             VStack() {
-                newEditClientButton
+                newEditPartButton
+                if  viewModel.isEditMode {
+                    emitPartButton
+                }
                 Spacer()
             }
             .navigationBarBackButtonHidden(true)
@@ -95,5 +93,5 @@ struct NewEditClientPageView<ViewModel:NewEditClientPageViewModelProtocol>: NewE
 }
 
 #Preview {
-    NewEditClientPageView<NewEditClientPageViewModel>(viewModel: .init())
+    NewEditPartPageView<NewEditPartPageViewModel>(viewModel: .init())
 }

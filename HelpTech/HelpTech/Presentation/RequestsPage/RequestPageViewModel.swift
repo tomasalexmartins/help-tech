@@ -14,24 +14,19 @@ protocol RequestPageViewModelProtocol: ViewModelProtocol {
     var requests: [Request] { get set }
     
     func newRequest()
-    func back()
 }
 
 class RequestPageViewModel: RequestPageViewModelProtocol {
     
     
     @Published
-    public var requests: [Request] = []
+    public var requests: [Request] = Request.requestsMock
     
     init() {
     }
     
     
     func newRequest() {
-        
-    }
-    
-    func back() {
         
     }
 }

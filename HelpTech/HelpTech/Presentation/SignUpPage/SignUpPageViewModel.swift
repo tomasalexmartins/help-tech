@@ -15,7 +15,6 @@ protocol SignUpPageViewModelProtocol: ViewModelProtocol {
     var emailTextField: CustomTextFieldViewModel { get set }
     var passwordTextField: CustomTextFieldViewModel { get set }
     var checkPasswordTextField: CustomTextFieldViewModel { get set }
-    var isEnabled: Bool { get set }
     
 }
 
@@ -23,12 +22,12 @@ class SignUpPageViewModel: SignUpPageViewModelProtocol {
     
     @Published
     var firstNameTextField: CustomTextFieldViewModel = .init(title: "Primeiro Nome",
-                                                         placeholder: "primeiro nome...",
-                                                         text: "")
+                                                             placeholder: "primeiro nome...",
+                                                             text: "")
     @Published
     var lastNameTextField: CustomTextFieldViewModel = .init(title: "Último Nome",
-                                                         placeholder: "último nome...",
-                                                         text: "")
+                                                            placeholder: "último nome...",
+                                                            text: "")
     @Published
     var emailTextField: CustomTextFieldViewModel = .init(title: "E-mail",
                                                          placeholder: "e-mail...",
@@ -39,11 +38,9 @@ class SignUpPageViewModel: SignUpPageViewModelProtocol {
                                                             text: "")
     @Published
     var checkPasswordTextField: CustomTextFieldViewModel = .init(title: "Confirmar Password",
-                                                         placeholder: "confirmar password...",
-                                                         text: "")
+                                                                 placeholder: "confirmar password...",
+                                                                 text: "")
     
-    @Published
-    var isEnabled = true
     
     init() {
     }

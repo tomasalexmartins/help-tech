@@ -9,11 +9,15 @@ import SwiftUI
 
 @main
 struct HelpTechApp: App {
+    @State private var path = NavigationPath()
+    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationStack(path: $path) {
+                LoginPageView<LoginPageViewModel>(viewModel: .init())
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
         }
     }
 }

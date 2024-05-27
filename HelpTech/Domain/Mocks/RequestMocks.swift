@@ -16,7 +16,7 @@ public extension Request {
         equipmentType: .laptop,
         parts: [Part.mock1, Part.mock2],
         status: .received,
-        timeLeft: "2 dias",
+        timeLeft: "2",
         isConfirmed: true
     )
     
@@ -28,7 +28,7 @@ public extension Request {
         equipmentType: .smartphone,
         parts: [Part.mock3, Part.mock4],
         status: .inProcess,
-        timeLeft: "3 dias",
+        timeLeft: "3",
         isConfirmed: false
     )
     
@@ -40,7 +40,7 @@ public extension Request {
         equipmentType: .tablet,
         parts: [Part.mock5],
         status: .completed,
-        timeLeft: "0 dias",
+        timeLeft: "0",
         isConfirmed: true
     )
     
@@ -52,7 +52,7 @@ public extension Request {
         equipmentType: .printer,
         parts: [Part.mock1, Part.mock3],
         status: .onHold,
-        timeLeft: "1 dia",
+        timeLeft: "1",
         isConfirmed: false
     )
     
@@ -64,7 +64,7 @@ public extension Request {
         equipmentType: .router,
         parts: [Part.mock2, Part.mock4],
         status: .cancelled,
-        timeLeft: "5 dias",
+        timeLeft: "5",
         isConfirmed: false
     )
     

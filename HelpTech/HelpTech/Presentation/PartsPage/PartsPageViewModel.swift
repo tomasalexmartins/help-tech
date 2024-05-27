@@ -14,23 +14,18 @@ protocol PartsPageViewModelProtocol: ViewModelProtocol {
     var parts: [Part] { get set }
     
     func newPart()
-    func back()
 }
 
 class PartsPageViewModel: PartsPageViewModelProtocol {
     
     @Published
-    public var parts: [Part] = []
+    public var parts: [Part] = Part.partsMock
     
     init() {
     }
     
     
     func newPart() {
-        
-    }
-    
-    func back() {
         
     }
 }

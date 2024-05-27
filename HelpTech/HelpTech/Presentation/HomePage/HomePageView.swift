@@ -14,6 +14,9 @@ struct HomePageView<ViewModel:HomePageViewModelProtocol>: HomePageViewProtocol {
     
     @StateObject
     var viewModel: ViewModel
+    @State private var showClientsPage = false
+    @State private var showRequestsPage = false
+    @State private var showStocksPage = false
     
     var headerView: some View {
         Image("Logo")
@@ -30,32 +33,41 @@ struct HomePageView<ViewModel:HomePageViewModelProtocol>: HomePageViewProtocol {
     
     var clientsButton: some View {
         VStack {
-            CustomButtonView(text: .constant("Clientes"), isEnabled:
-                    .constant(true), action: .constant(viewModel.goToClients))
+            CustomButtonView(text: .constant("Clientes"), isEnabled: .constant(true), action: .constant({ showClientsPage = true }))
         }
         .padding(.horizontal, 40)
         .padding(.top, 15)
         .frame(height: 65)
+        .background(
+            NavigationLink("", destination: ClientPageView<ClientPageViewModel>(viewModel: .init()), isActive: $showClientsPage)
+                .hidden()
+        )
     }
     
     var requestsButton: some View {
         VStack {
-            CustomButtonView(text: .constant("Pedidos de Reparações"), isEnabled:
-                    .constant(true), action: .constant(viewModel.goToRequests))
+            CustomButtonView(text: .constant("Pedidos de Reparações"), isEnabled: .constant(true), action: .constant({ showRequestsPage = true }))
         }
         .padding(.horizontal, 40)
         .padding(.top, 15)
         .frame(height: 65)
+        .background(
+            NavigationLink("", destination: RequestPageView<RequestPageViewModel>(viewModel: .init()), isActive: $showRequestsPage)
+                .hidden()
+        )
     }
     
     var stocksButton: some View {
         VStack {
-            CustomButtonView(text: .constant("Peças em Stock"), isEnabled:
-                    .constant(true), action: .constant(viewModel.goToParts))
+            CustomButtonView(text: .constant("Peças em Stock"), isEnabled: .constant(true), action: .constant({ showStocksPage = true }))
         }
         .padding(.horizontal, 40)
         .padding(.top, 15)
         .frame(height: 65)
+        .background(
+            NavigationLink("", destination: PartsPageView<PartsPageViewModel>(viewModel: .init()), isActive: $showStocksPage)
+                .hidden()
+        )
     }
     
     
@@ -72,8 +84,8 @@ struct HomePageView<ViewModel:HomePageViewModelProtocol>: HomePageViewProtocol {
             Spacer()
             
         }
-        .navigationBarBackButtonHidden(true)
         .background(.gray.opacity(0.3))
+        .navigationBarBackButtonHidden(true)
     }
 }
 

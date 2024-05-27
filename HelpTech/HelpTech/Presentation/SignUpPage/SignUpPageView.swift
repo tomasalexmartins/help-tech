@@ -12,12 +12,13 @@ protocol SignUpPageViewProtocol: View { }
 
 struct SignUpPageView<ViewModel:SignUpPageViewModelProtocol>: SignUpPageViewProtocol {
     
+    @Environment(\.presentationMode) var presentationMode
     @StateObject
     var viewModel: ViewModel
     
     var backButton: some View {
         VStack(alignment: .leading) {
-            BackButtonView(action: .constant({}))
+            BackButtonView(action: .constant({presentationMode.wrappedValue.dismiss()}))
         }
         .frame(height: 65)
         .padding(.trailing, 330)
@@ -53,11 +54,11 @@ struct SignUpPageView<ViewModel:SignUpPageViewModelProtocol>: SignUpPageViewProt
             .padding(.horizontal, 40)
             .padding(.top, 15)
     }
-     
+    
     var signUpButton: some View {
         VStack {
             CustomButtonView(text: .constant("Registar"), isEnabled:
-                                $viewModel.isEnabled, action: .constant({}))
+                    .constant(true), action: .constant({}))
         }
         .padding(.horizontal, 40)
         .padding(.top, 15)

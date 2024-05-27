@@ -12,9 +12,8 @@ import UI
 protocol LoginPageViewModelProtocol: ViewModelProtocol {
     var emailTextField: CustomTextFieldViewModel { get set }
     var passwordTextField: CustomTextFieldViewModel { get set }
-    var isEnabled: Bool { get set }
-
-    func authenticate()
+    
+    func authenticate() -> Bool
 }
 
 class LoginPageViewModel: LoginPageViewModelProtocol {
@@ -33,7 +32,22 @@ class LoginPageViewModel: LoginPageViewModelProtocol {
     init() {
     }
     
-    func authenticate() {
-       
+    
+    func authenticate() -> Bool {
+        guard isValidEmail(emailTextField.text) else {
+            return false
+        }
+
+        guard passwordTextField.text.count >= 8 else {
+            return false
+        }
+        
+        return true
+    }
+    
+    private func isValidEmail(_ email: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return emailPredicate.evaluate(with: email)
     }
 }

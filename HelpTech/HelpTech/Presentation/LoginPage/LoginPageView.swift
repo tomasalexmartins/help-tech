@@ -11,10 +11,11 @@ import UI
 protocol LoginPageViewProtocol: View { }
 
 struct LoginPageView<ViewModel:LoginPageViewModelProtocol>: LoginPageViewProtocol {
-
+    
     @StateObject
     var viewModel: ViewModel
-
+    @State private var showHomePage = false
+    
     var headerView: some View {
         VStack {
             Text("Help Tech")
@@ -26,49 +27,56 @@ struct LoginPageView<ViewModel:LoginPageViewModelProtocol>: LoginPageViewProtoco
         }
         .padding(.horizontal, 120)
     }
-
+    
     var emailView: some View {
         CustomTextField(viewModel: viewModel.emailTextField)
             .padding(.horizontal, 40)
             .padding(.top, 40)
     }
-
+    
     var passwordView: some View {
         PasswordTextField(viewModel: viewModel.passwordTextField)
             .padding(.horizontal, 40)
             .padding(.top, 15)
     }
-
+    
     var forgotPasswordView: some View {
-        VStack(alignment: .leading) {
-            Text("Recuperar Senha")
-                .font(.caption)
+        NavigationLink(destination: RecoverPasswordPageView<RecoverPasswordPageViewModel>(viewModel: .init())) {
+            VStack(alignment: .leading) {
+                Text("Recuperar Senha")
+                    .font(.caption)
+            }
+            .padding(.leading, 40)
+            .padding(.top, 15)
         }
-        .padding(.leading, 40)
-        .padding(.top, 15)
     }
-
+    
     var loginButton: some View {
-        VStack{
-            CustomButtonView(text: .constant("Entrar"), isEnabled:
-                                $viewModel.isEnabled, action: .constant(viewModel.authenticate))
+        VStack {
+            CustomButtonView(text: .constant("Entrar"), isEnabled: .constant(true), action: .constant({showHomePage = viewModel.authenticate()}))
         }
         .padding(.horizontal, 40)
         .padding(.top, 15)
         .frame(height: 65)
+        .background(
+            NavigationLink("", destination: HomePageView(viewModel: HomePageViewModel()), isActive: $showHomePage)
+                .hidden()
+        )
     }
-
+    
     var createAccountView: some View {
-        VStack(alignment: .trailing) {
-            Text("Registar")
-                .font(.caption)
-                .foregroundColor(.blue)
+        NavigationLink(destination:  SignUpPageView<SignUpPageViewModel>(viewModel: .init())){
+            VStack(alignment: .trailing) {
+                Text("Registar")
+                    .font(.caption)
+                    .foregroundColor(.blue)
+            }
+            .padding(.trailing, 40)
+            .padding(.top, 15)
         }
-        .padding(.trailing, 40)
-        .padding(.top, 15)
     }
-
-
+    
+    
     var body: some View {
         VStack{
             headerView

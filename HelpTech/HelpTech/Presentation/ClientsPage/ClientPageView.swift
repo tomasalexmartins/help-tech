@@ -12,12 +12,13 @@ protocol ClientPageViewProtocol: View { }
 
 struct ClientPageView<ViewModel:ClientPageViewModelProtocol>: ClientPageViewProtocol {
     
+    @Environment(\.presentationMode) var presentationMode
     @StateObject
     var viewModel: ViewModel
     
     var backButton: some View {
         VStack(alignment: .leading) {
-            BackButtonView(action: .constant({viewModel.back()}))
+            BackButtonView(action: .constant({presentationMode.wrappedValue.dismiss()}))
         }
         .frame(height: 65)
         .padding(.trailing, 330)
@@ -47,7 +48,7 @@ struct ClientPageView<ViewModel:ClientPageViewModelProtocol>: ClientPageViewProt
         VStack(alignment: .leading) {
             ForEach(viewModel.clients.indices, id: \.self) { index in
                 VStack(alignment: .leading, spacing: 0) {
-                    ClientView(viewModel: ClientViewModel(name: .constant("\(viewModel.clients[index].firstname ?? "") \(viewModel.clients[index].lastname ?? "")"), email: .constant(viewModel.clients[index].email ?? ""), cellphone: .constant(viewModel.clients[index].cellphone ?? "")))
+                    ClientView(viewModel: ClientViewModel(name: .constant("\(viewModel.clients[index].name ?? "")"), email: .constant(viewModel.clients[index].email ?? ""), cellphone: .constant(viewModel.clients[index].cellphone ?? "")))
                         .padding(.vertical, 20)
                         .padding(.horizontal, 10)
                 }
@@ -68,17 +69,19 @@ struct ClientPageView<ViewModel:ClientPageViewModelProtocol>: ClientPageViewProt
     }
     
     var body: some View {
-        VStack() {
-            backButton
-            titleView
-            ScrollView {
-                listView
+        NavigationView {
+            VStack() {
+                backButton
+                titleView
+                ScrollView {
+                    listView
+                }
+                newClientButton
+                Spacer()
             }
-            newClientButton
-            Spacer()
-            .navigationBarBackButtonHidden(true)
+            .background(.gray.opacity(0.3))
         }
-        .background(.gray.opacity(0.3))
+        .navigationBarBackButtonHidden(true)
     }
 }
 

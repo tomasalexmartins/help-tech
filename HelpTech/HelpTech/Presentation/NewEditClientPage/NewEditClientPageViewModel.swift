@@ -21,7 +21,6 @@ protocol NewEditClientPageViewModelProtocol: ViewModelProtocol {
     var nifTextField: CustomTextFieldViewModel { get set }
     
     func newEditClient()
-    func back()
 }
 
 class NewEditClientPageViewModel: NewEditClientPageViewModelProtocol {
@@ -29,15 +28,14 @@ class NewEditClientPageViewModel: NewEditClientPageViewModelProtocol {
     private var flagNewEdit: String = ""
     
     @Published
-    public var title: String = "Teste Texto"
+    public var title: String = "Editar/Adicionar Cliente"
     
     @Published
-    public var btnText: String = "Teste btn"
+    public var btnText: String = "Editar/Adicionar"
     
     @Published
     public var client: Client = .init(id: nil,
-                                      firstname: nil,
-                                      lastname: nil,
+                                      name: nil,
                                       email: nil,
                                       cellphone: nil,
                                       address: nil,
@@ -68,10 +66,6 @@ class NewEditClientPageViewModel: NewEditClientPageViewModelProtocol {
     }
     
     func newEditClient() {
-        
-    }
-    
-    func back() {
         
     }
 }
