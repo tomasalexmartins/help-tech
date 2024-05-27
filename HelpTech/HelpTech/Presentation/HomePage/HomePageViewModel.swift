@@ -11,31 +11,15 @@ import UI
 
 protocol HomePageViewModelProtocol: ViewModelProtocol {
     var name: String? { get set }
-
-    func goToClients()
-    func goToRequests()
-    func goToParts()
 }
 
 class HomePageViewModel: HomePageViewModelProtocol {
     
     
     @Published
-    var name: String?
+    var name: String? = "João"
 
     
     init() {
-    }
-    
-    func goToClients() {
-        
-    }
-    
-    func goToRequests() {
-        
-    }
-    
-    func goToParts() {
-        
     }
 }

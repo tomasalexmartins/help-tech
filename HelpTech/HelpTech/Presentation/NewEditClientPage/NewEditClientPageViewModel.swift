@@ -11,8 +11,7 @@ import UI
 import Domain
 
 protocol NewEditClientPageViewModelProtocol: ViewModelProtocol {
-    var title: String { get set }
-    var btnText: String { get set }
+    var isEditMode: Bool { get }
     var client: Client { get set }
     var nameTextField: CustomTextFieldViewModel { get set }
     var emailTextField: CustomTextFieldViewModel { get set }
@@ -25,13 +24,8 @@ protocol NewEditClientPageViewModelProtocol: ViewModelProtocol {
 
 class NewEditClientPageViewModel: NewEditClientPageViewModelProtocol {
     
-    private var flagNewEdit: String = ""
-    
     @Published
-    public var title: String = "Editar/Adicionar Cliente"
-    
-    @Published
-    public var btnText: String = "Editar/Adicionar"
+    public var isEditMode: Bool = false
     
     @Published
     public var client: Client = .init(id: nil,
@@ -42,27 +36,27 @@ class NewEditClientPageViewModel: NewEditClientPageViewModelProtocol {
                                       nif: nil)
     
     @Published
-    var nameTextField: CustomTextFieldViewModel = .init(title: "Nome",
-                                                        placeholder: "nome...",
-                                                        text: "")
+    var nameTextField: CustomTextFieldViewModel
     @Published
-    var emailTextField: CustomTextFieldViewModel = .init(title: "E-mail",
-                                                         placeholder: "e-mail...",
-                                                         text: "")
+    var emailTextField: CustomTextFieldViewModel
     @Published
-    var cellphoneTextField: CustomTextFieldViewModel = .init(title: "Telefone",
-                                                             placeholder: "telefone...",
-                                                             text: "")
+    var cellphoneTextField: CustomTextFieldViewModel 
     @Published
-    var addressTextField: CustomTextFieldViewModel = .init(title: "Morada",
-                                                           placeholder: "morada...",
-                                                           text: "")
+    var addressTextField: CustomTextFieldViewModel
     @Published
-    var nifTextField: CustomTextFieldViewModel = .init(title: "NIF",
-                                                       placeholder: "nif...",
-                                                       text: "")
+    var nifTextField: CustomTextFieldViewModel
     
-    init() {
+    init(isEditMode: Bool = false, client: Client? = nil) {
+        self.isEditMode = isEditMode
+        let initialClient = client ?? Client(id: nil, name: nil, email: nil, cellphone: nil, address: nil, nif: nil)
+        
+        self.client = initialClient
+        
+        self.nameTextField = CustomTextFieldViewModel(title: "Nome", placeholder: "nome...", text: initialClient.name ?? "")
+        self.emailTextField = CustomTextFieldViewModel(title: "E-mail", placeholder: "e-mail...", text: initialClient.email ?? "")
+        self.cellphoneTextField = CustomTextFieldViewModel(title: "Telefone", placeholder: "telefone...", text: initialClient.cellphone ?? "")
+        self.addressTextField = CustomTextFieldViewModel(title: "Morada", placeholder: "morada...", text: initialClient.address ?? "")
+        self.nifTextField = CustomTextFieldViewModel(title: "NIF", placeholder: "nif...", text: String(initialClient.nif ?? 0))
     }
     
     func newEditClient() {

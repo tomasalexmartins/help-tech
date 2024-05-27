@@ -27,7 +27,7 @@ struct NewEditClientPageView<ViewModel:NewEditClientPageViewModelProtocol>: NewE
     
     var titleView: some View {
         VStack {
-            Text(viewModel.title)
+            Text(viewModel.isEditMode ? "Editar Cliente" : "Adicionar Cliente")
                 .font(.title3)
                 .bold()
         }
@@ -67,7 +67,7 @@ struct NewEditClientPageView<ViewModel:NewEditClientPageViewModelProtocol>: NewE
     
     var newEditClientButton: some View {
         VStack {
-            CustomButtonView(text: .constant(viewModel.btnText), isEnabled:
+            CustomButtonView(text: .constant(viewModel.isEditMode ? "Editar" : "Adicionar"), isEnabled:
                     .constant(true), action: .constant({viewModel.newEditClient()}))
         }
         .padding(.horizontal, 40)

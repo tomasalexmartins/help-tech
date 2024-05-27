@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UI
+import Domain
 
 protocol ClientPageViewProtocol: View { }
 
@@ -15,6 +16,9 @@ struct ClientPageView<ViewModel:ClientPageViewModelProtocol>: ClientPageViewProt
     @Environment(\.presentationMode) var presentationMode
     @StateObject
     var viewModel: ViewModel
+    @State private var showAddEditPage = false
+    @State private var selectedClient: Client? = nil
+    @State private var isEditMode = false
     
     var backButton: some View {
         VStack(alignment: .leading) {
@@ -51,6 +55,11 @@ struct ClientPageView<ViewModel:ClientPageViewModelProtocol>: ClientPageViewProt
                     ClientView(viewModel: ClientViewModel(name: .constant("\(viewModel.clients[index].name ?? "")"), email: .constant(viewModel.clients[index].email ?? ""), cellphone: .constant(viewModel.clients[index].cellphone ?? "")))
                         .padding(.vertical, 20)
                         .padding(.horizontal, 10)
+                        .onTapGesture {
+                            selectedClient = viewModel.clients[index]
+                            isEditMode = true
+                            showAddEditPage = true
+                        }
                 }
                 .background(Color.white)
                 .padding(.horizontal, 10)
@@ -61,11 +70,17 @@ struct ClientPageView<ViewModel:ClientPageViewModelProtocol>: ClientPageViewProt
     var newClientButton: some View {
         VStack {
             CustomButtonView(text: .constant("Novo Cliente"), isEnabled:
-                    .constant(true), action: .constant({viewModel.newClient()}))
+                    .constant(true), action: .constant({selectedClient = nil
+                        isEditMode = false
+                        showAddEditPage = true}))
         }
         .padding(.horizontal, 40)
         .padding(.top, 15)
         .frame(height: 65)
+        .background(
+            NavigationLink("", destination: NewEditClientPageView<NewEditClientPageViewModel>(viewModel: .init(isEditMode: isEditMode, client: selectedClient)), isActive: $showAddEditPage)
+                .hidden()
+        )
     }
     
     var body: some View {
